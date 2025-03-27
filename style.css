@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+    --border-color: #1a4cd7;
+    --fill-color: #57a6f9;
+    --background-color: #2b6df4;
+    --text-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1, h3 {
+    margin: 10px 0;
+}
+
+.cup {
+    background-color: #fff;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 0 40px 40px;
+    height: 330px;
+    width: 150px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.remained span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.percentage {
+    background-color: var(--fill-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+    height: 0;
+    color: white;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    gap: 5px;
+}
+
+.cup.cup-small {
+    height: 90px;
+    width: 50px;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--border-color);
+    font-weight: bold;
+}
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.text {
+    font-size: 14px;
+    margin: 15px 0;
+    font-weight: bold;
+}
